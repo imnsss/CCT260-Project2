@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lexend:wght@100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lexend", sans-serif;
+}
+
+body {
+}
+
+header {
+	/* position: fixed; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #ddd;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10%;
+	border-bottom: 1px solid #fff;
+}
+
+.logo {
+	font-size: 50px;
+	color: #000;
+	text-decoration: none;
+	font-weight: 800;
+	font-family: "Caveat", cursive;
+}
+
+.globalnav a {
+	font-size: 18px;
+	color: #000;
+	text-decoration: none;
+	font-weight: 500;
+	margin-right: 35px;
+}
+
+.globalnav a:hover,
+.globalnav a.active{
+	color: #6486F4;
+}
+
+.spotlight {
+	background-image: url("../spotlight.jpg");
+	width: 100%;
+	height: 560px;
+	background-size: cover;
+}
+
+
+main {
+	width: 1280px;
+	margin: 0 auto 0 auto;
+	background-size: cover;
+}
+
+.home {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 15%;
+	height: 45vh; /* vh -> viewport height */
+}
+
+.home-content {
+	max-width: 600px;
+}
+
+.home-content h1 {
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.home-content h3 {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.selfie {
+	display: grid;
+	place-items: center;
+}
+
+.selfie img {
+	width: 80%;
+	border-radius: 10%;
+}
+
+footer {
+	display: flex;
+	padding: 20px 10%;
+	/* background: red; */
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer p {
+  	text-align: left;
+	margin-left: auto;
+}
+
+.social-nav {
+	position: absolute;
+	width: auto;
+}
+
+.social-nav a {
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+ 	align-items: center; /* Center icon vertically */
+  	justify-content: center; /* Center icon horizontally */
+  	background: transparent;
+	font-size: 20px;
+	color: #000;
+	text-decoration: none;
+}
+
+.social-nav a:hover {
+	color: #6486F4;
+}
+
+.introduce {
+	background:grey;
+	
+}
+
+.feature-photo {
+	width: 360px;
+	float: left;
+	margin: 20px 10%;
+
+}
+
+.feature-photo img { /* img inside the class */
+	width: 100%;
+}
+
+.feature-photo h2 {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.feature-photo img:hover {
+	opacity: 0.75;
+	filter: grayscale(50%);
+	border:1px;
+}
+
+.video {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5px; /* vh -> viewport height */
+}
+
+.feature-video {
+	align-items: center;
+}
+
+
+.box {
+	position: relative;
+	overflow: hidden;
+	width: 360px;
+	height: 260px;
+	border-radius: 5%;
+	margin: 0 30px;
+}
+
+.box img {
+	width: 100%;
+	height: 100%;
+	transition: all.4s;
+}
+
+.box:hover img {
+	transform: scale(1.1);
+}
+
+.box::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0.8));
+	opacity: 0;
+	z-index: 1;
+}
+
+.box:hover::before {
+	opacity: 0.75;
+}
+
+.home-info {
+	position: absolute;
+	left: 0;
+	bottom: -50px;
+	color: #F6FFED;   /* box里的字体颜色 */
+	z-index: 100;
+	padding: 25px 30px;
+	font-size: 18px;
+	transition: all, 1s;
+}
+
+.home-info h4 {
+	font-size: 24px;
+	margin: 5px 0;
+}
+
+.home-info a {
+	color: #fff;
+	display: block;
+}
+
+.home-info .more {
+	margin-top: 15px;
+	
+}
+
+.box:hover .home-info  {
+	bottom: 0;
+}
+
+.detail-nav {
+	display: flex;
+ 	align-items: center; 
+  	justify-content: center; 
+}
+
+.quote {
+	display: flex;
+ 	align-items: center; 
+  	justify-content: center; 
+	margin: 5% 0;
+	font-size: 20px;
+	font-family: "Caveat", cursive;
+}
+
+.quote1 {
+	display: flex;
+ 	align-items: center; 
+  	justify-content: center; 
+	margin: 5% 0;
+	font-size: 35px;
+	font-family: "Caveat", cursive;
+}
+
+.home-process-nav {
+	text-decoration: none;
+	margin: 5% 0;
+	align-items: center; 
+  	justify-content: center; 
+	display: flex;
+}
+
+.home-process-nav p {
+	color: #000;
+	font-family: "Caveat", cursive;
+	font-size: 30px;
+	font-weight: 500;
+	
+}
+
+.home-process-nav p:hover {
+	color: #6486F4;
+}
+
+#video-placeholder {
+	position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+#video-placeholder video {
+	height: auto;
+	vertical-align: middle;
+	width: 100%;
+}
+
+#video-placeholder .video-caption {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#video-placeholder .video-caption h1 {
+	color: #fff;
+	font-family: "Caveat", cursive;
+	font-size: 8em;
+	text-align: left;
+}
+
+.port-quote {
+	display: flex;
+ 	align-items: center; 
+  	justify-content: center; 
+	margin: 5% 0;
+	font-size: 20px;
+	font-family: "Caveat", cursive;
+}
+
+.port {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5%;
+	height: 45vh; /* vh -> viewport height */
+	margin: 3% 0;
+}
+
+.port-content {
+	max-width: 600px;
+}
+
+.port-content h1 {
+	font-size: 56px;
+	font-weight: 700;
+}
+
+.port-img {
+	display: grid;
+	place-items: center;
+}
+
+.port-img img {
+	width: 420px;
+	height: 350px;
+	border-radius: 5%;
+}
+
+
+.port-link{
+	text-decoration: none;
+	margin: 5% 0;
+	display: flex;
+	color: #000;
+	font-family: "Caveat", cursive;
+	font-size: 23px;
+	font-weight: 800;
+}
+
+.port-link:hover {
+	color: #6486F4;
+}
+
+
+table.directory {
+	border: 1px solid #000;
+	width: 100%;
+}
+
+table.directory tr td, 
+table.directory tr th{
+	border: 1px dotted #666;
+	padding: 8px;
+	margin: 4px;
+	text-align: center;
+}
+
+table.directory tr th {
+	background-color: #ddd;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
+
+table.directory caption {
+	caption-side: bottom;
+	margin: 10px 0;
+	font-style: italic;
+}
+
+.spotlight-resume {
+	background-image: url("../images/resume1.jpg");
+	width: 100%;
+	height: 560px;
+	background-size: cover;
+}
+
+.resume {
+	text-align: center;
+	width: 100%;
+}
+
+.resume tr td, 
+.resume tr th{
+	border: 1px solid #666;
+	padding: 8px;
+	margin: 120px;
+	line-height: 2.3;
+}
+
+.resume td h1 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 35px;
+	font-weight: 650;
+}
+
+.resume-img {
+	width: 10%;
+}
+
+.education {
+	text-align: center;
+	border: 1px solid #000;
+	margin: auto;
+}
+
+.resume-quote {
+	display: flex;
+ 	align-items: center; 
+  	justify-content: center; 
+	margin: 5% 0;
+	font-size: 40px;
+	font-family: "Caveat", cursive;
+}
+
+form.comment-form label {
+	display: block;
+}
+
+form.comment-form input {
+	margin-bottom: 20px;
+	padding: 5px;
+	color: #003366;
+	border: none;
+	border-bottom: 2px solid #000;
+}
+
+.submit-button {
+	display: block; /* new line */
+	margin: 10px 0;
+	border: 2px solid #003366;
+}
+
+.spotlight-contact {
+	background-image: url("../images/contact1.jpg");
+	width: 100%;
+	height: 560px;
+	background-size: cover;
+}
+
+.contact-quote {
+	float: left; 
+	margin: 5% 0;
+	font-size: 40px;
+	font-family: "Caveat", cursive;
+}
+
+.spotlight-process {
+	background-image: url("../images/process.jpg");
+	width: 100%;
+	height: 560px;
+	background-size: cover;
+}
+
+.spotlight-contact h1,
+.spotlight-resume h1,
+.spotlight h1,
+.spotlight-process h1
+{
+	color: #fff;
+	font-family: "Caveat", cursive;
+	font-size: 8em;
+	text-align: left;
+	padding-top: 180px;
+	padding-bottom: 12px;
+	padding-left: 24px;
+	font-weight: bold;
+	letter-spacing: -5px;
+}
+
+.process {
+	padding: 8px;
+	margin: 12px;
+	line-height: 2.3;
+}
+
+.processimg {
+	width: 600px;
+	display: flex;
+ 	align-items: center; 
+  	justify-content: center; 
+	margin: 0 25%;
+}
